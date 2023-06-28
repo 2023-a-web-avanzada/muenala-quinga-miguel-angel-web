@@ -119,14 +119,14 @@ async function actualizarConcesionaria() {
     const nombre = await obtenerDatoConsola(`Ingrese el nuevo nombre de la concesionaria [${concesionaria.nombre}]: `);
     const direccion = await obtenerDatoConsola(`Ingrese la nueva dirección de la concesionaria [${concesionaria.direccion}]: `);
     const telefono = await obtenerDatoConsola(`Ingrese el nuevo teléfono de la concesionaria [${concesionaria.telefono}]: `);
-    const fechaApertura = await obtenerDatoConsola(`Ingrese el nuevo teléfono de la concesionaria [${concesionaria.fechaApertura}]: `);
-    const activa = await obtenerDatoConsola(`Ingrese el nuevo teléfono de la concesionaria [${concesionaria.activa}]: `);
+    const fechaApertura = await obtenerDatoConsola(`Ingrese la nueva fecha de apertura de la concesionaria [${concesionaria.fechaApertura}]: `);
+    const activa = await obtenerDatoConsola(`Ingrese el estado de concesionaria, está activa? (sí/no) [${concesionaria.activa}]: `);
 
     concesionaria.nombre = nombre || concesionaria.nombre;
     concesionaria.direccion = direccion || concesionaria.direccion;
     concesionaria.telefono = telefono || concesionaria.telefono;
-    concesionaria.fechaApertura = telefono || concesionaria.fechaApertura;
-    concesionaria.activa = telefono || concesionaria.activa;
+    concesionaria.fechaApertura = fechaApertura || concesionaria.fechaApertura;
+    concesionaria.activa = activa || concesionaria.activa;
 
     guardarArchivo('concesionaria.json', concesionarias);
 

@@ -15,6 +15,21 @@
     "telefono": "0385264493",
     "fechaApertura": "01/05/1998",
     "activa": true,
-    "autos": []
+    "autos": [
+      {
+        "id": 1,
+        "marca": "Lamborghini",
+        "modelo": "Diablo",
+        "anio": 1990,
+        "precio": 30000
+      },
+      {
+        "id": 2,
+        "marca": "Lamborghini",
+        "modelo": "Murciélago",
+        "anio": 2001,
+        "precio": 100000
+      }
+    ]
   }
 ]
