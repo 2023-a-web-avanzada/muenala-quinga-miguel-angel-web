@@ -66,7 +66,7 @@ export const Header = () => {
             </nav>
         </div>
         <div>
-            <nav className="w-full sm:w-auto sm:mt-0 pt-7 px-12 flex space-x-96">
+            <nav className="w-full sm:w-auto sm:mt-0 pt-7 px-12 flex space-x-96 justify-between">
                 <ul className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
                     <li><a href="#" className="hover:text-blue-500 text-sm font-medium">3D</a></li>
                     <li><a href="#" className="hover:text-blue-500 text-sm font-medium">2D</a></li>

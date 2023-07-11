@@ -5,6 +5,8 @@ import 'boxicons'
 import { SupBody } from './SupBody';
 import { OffertCardBody } from './OffertCardBody';
 import { YoutubeBody } from './YoutubeBody';
+import { MusicBody } from './MusicBody';
+import { Footer } from './Footer';
 
 export const Body = () => {
     const assets = [
@@ -50,14 +52,14 @@ export const Body = () => {
           rating: 2,
           price: '$20',
         },
-        {
-          imageSrc: "https://picsum.photos/150/100?random=2",
+        { 
+          imageSrc: "https://picsum.photos/150/100?random=2 ",
           author: 'FIMPOSSIBLE CREATIONS',
           assetName: 'Animation Designer',
           rating: 5,
           price: '$54.99',
         },
-      ];
+      ];//
 
   return (
       <body>
@@ -72,6 +74,12 @@ export const Body = () => {
         <OffertCardBody/>
 
         <YoutubeBody/>
+        
+        <div >
+          <MusicBody/>
+        </div>
+
+        <Footer/>
       </body>
     )
 }
