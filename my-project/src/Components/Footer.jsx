@@ -14,9 +14,7 @@ const ImageWithText = ({ imageSrc, text }) => {
 
 export const Footer = () => {
   useEffect(() => {
-    // Lógica adicional usando useEffect si es necesario
     return () => {
-      // Limpieza del efecto si es necesario
     };
   }, []);
 

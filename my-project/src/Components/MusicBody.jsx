@@ -8,8 +8,6 @@ export const MusicBody = () => {
   };
 
   useEffect(() => {
-    // Aquí puedes realizar acciones adicionales cuando se selecciona una opción
-    // Por ejemplo, hacer una llamada a la API para obtener los datos de la tarjeta seleccionada
   }, [selectedOption]);
 
   const renderCard = () => {

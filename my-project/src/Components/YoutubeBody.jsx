@@ -40,7 +40,7 @@ export const YoutubeBody = () => {
                 <div className="">{/*w-1/3 */}
                     <div className="flex justify-center">
                         <YouTube
-                            videoId={videoId} // Reemplaza 'VIDEO_ID' con el ID real de tu video de YouTube   h-5 pt-1 pr-1
+                            videoId={videoId} //  ID del video de YouTube   h-5 pt-1 pr-1
                             onReady={handleVideoReady}
                             onStateChange={handleVideoStateChange}
                         />

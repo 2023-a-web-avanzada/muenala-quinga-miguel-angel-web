@@ -6,7 +6,6 @@ import { SupBody } from './SupBody';
 import { OffertCardBody } from './OffertCardBody';
 import { YoutubeBody } from './YoutubeBody';
 import { MusicBody } from './MusicBody';
-import { Footer } from './Footer';
 
 export const Body = () => {
     const assets = [
@@ -79,7 +78,6 @@ export const Body = () => {
           <MusicBody/>
         </div>
 
-        <Footer/>
       </body>
     )
 }
