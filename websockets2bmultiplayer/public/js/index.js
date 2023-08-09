@@ -18,7 +18,7 @@ const y = canvas.height / 2
 const frontEndPlayers = {}
 const frontEndProjectiles = {}
 
-socket.on('updateProjectiles', (backEndProjectiles) => {
+socket.on('updateProjectiles', (backEndProjectiles) => {//sincronizar y actualizar los proyectiles
   for (const id in backEndProjectiles) {
     const backEndProjectile = backEndProjectiles[id]
 
@@ -36,14 +36,14 @@ socket.on('updateProjectiles', (backEndProjectiles) => {
     }
   }
 
-  for (const frontEndProjectileId in frontEndProjectiles) {
+  for (const frontEndProjectileId in frontEndProjectiles) {// Elimina el proyectil del cliente utilizando su ID.
     if (!backEndProjectiles[frontEndProjectileId]) {
       delete frontEndProjectiles[frontEndProjectileId]
     }
   }
 })
 
-socket.on('updatePlayers', (backEndPlayers) => {
+socket.on('updatePlayers', (backEndPlayers) => { // sincronizar y actualizar los jugadores en un juego
   for (const id in backEndPlayers) {
     const backEndPlayer = backEndPlayers[id]
 
@@ -110,7 +110,6 @@ socket.on('updatePlayers', (backEndPlayers) => {
     }
   }
 
-  // this is where we delete frontend players
   for (const id in frontEndPlayers) {
     if (!backEndPlayers[id]) {
       const divToDelete = document.querySelector(`div[data-id="${id}"]`)
@@ -126,7 +125,7 @@ socket.on('updatePlayers', (backEndPlayers) => {
 })
 
 let animationId
-function animate() {
+function animate() { // animación continua que actualiza y renderiza los jugadores y proyectiles
   animationId = requestAnimationFrame(animate)
   // c.fillStyle = 'rgba(0, 0, 0, 0.1)'
   c.clearRect(0, 0, canvas.width, canvas.height)
@@ -149,11 +148,7 @@ function animate() {
     const frontEndProjectile = frontEndProjectiles[id]
     frontEndProjectile.draw()
   }
-
-  // for (let i = frontEndProjectiles.length - 1; i >= 0; i--) {
-  //   const frontEndProjectile = frontEndProjectiles[i]
-  //   frontEndProjectile.update()
-  // }
+  
 }
 
 animate()
