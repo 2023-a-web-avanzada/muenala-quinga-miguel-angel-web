@@ -63,7 +63,7 @@ function FormPage() {
   }
 
   const hanbleDelete = async () => {
-    if(window.confirm("Are you sure you want to delete this task?")){
+    if(window.confirm("Are you sure you want to delete this Car?")){
       const res = await fetch(`/api/tasks/${params.id}`, {method: "DELETE"},)
       console.log("deleted")
       router.push('/')
@@ -93,13 +93,14 @@ function FormPage() {
     <div className='h-[calc(100vh-7rem)] flex justify-center items-center'>
       <form onSubmit={handleSubmit}>
         <header className='flex justify-between'>
-          <h1 className='font-bolt text-3xl'>{ !params.id? "Create a new Task" : "Update task"} </h1>
+          <h1 className='font-bolt text-3xl'>{ !params.id? "Create a new Car" : "Update Car"} </h1>
           <button type="button" className='bg-red-500 px-3 py-1 rounded-md' onClick = {hanbleDelete}>Delete</button>
         </header>
         <input type="text" name="title" placeholder="Title" className='bg-gray-800 border-2 w-full p-4 rounded-lg my-4' value ={newTask.title} onChange={handleChange}/>
         <textarea name='description' rows={3} placeholder='Description' className='bg-gray-800 border-2 w-full p-4 rounded-lg my-4' value={newTask.description} onChange={handleChange}></textarea>
+        <input type="text" name="title" placeholder="Price" className='bg-gray-800 border-2 w-full p-4 rounded-lg my-4' value ={newTask.title} onChange={handleChange}/>
         <button type="submit" className = 'bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg'>{ !params.id? "Create" : "Save"}</button>
-
+        
       </form>
     </div>
   )
